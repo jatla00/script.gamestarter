@@ -57,16 +57,16 @@ tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz
 # rm /storage/downloads/frontend.tar.gz
 
 # añadir audio al config.txt
-mount -o remount,rw /flash
-echo 'dtparam=audio=on' >> /flash/config.txt
+# mount -o remount,rw /flash
+# echo 'dtparam=audio=on' >> /flash/config.txt
 
 # borramos los zips de data y renombramos el instalador
-rm /storage/.kodi/addons/script.gamestarter/resources/data/retroarch.tar.gz
-rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part1.tar.gz
-rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part2.tar.gz
-rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part3.tar.gz
-rm /storage/.kodi/addons/script.gamestarter/resources/data/emulationstation.tar.gz
-rm /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/retroarch.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part1.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part2.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part3.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/emulationstation.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz
 
 mv /storage/.kodi/addons/script.gamestarter/resources/bin/installer.sh /storage/.kodi/addons/script.gamestarter/resources/bin/installer_done.sh 
 
