@@ -2,7 +2,7 @@
 # Script for installing Gamestarter
 
 #Welcome message
-echo 'Installing Gamestarter v-1.0.1' 
+echo 'Installing Gamestarter v-2.0' 
 
 # hacer ejecutables los scripts y binarios
 chmod a+x /storage/.kodi/addons/script.gamestarter/resources/bin/gamestarter.sh
@@ -18,6 +18,9 @@ tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part2.t
 tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part3.tar.gz -C /storage/.config/retroarch/cores/ -xz
 tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/emulationstation.tar.gz -C /storage/.config/ -xz
 tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz -C /storage/ -xz
+tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/advancedlauncher.tar.gz -C /storage/.config/ -xz
+
+ln -s /storage/.config/advancedlauncher/ /storage/.kodi/userdata/addon_data/plugin.program.advanced.launcher
 
 # descargar packages
 # retroarch y cores
@@ -52,7 +55,7 @@ tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz
 # wget --no-check-certificate -O /storage/downloads/frontend.tar.gz https://github.com/bite-your-idols/gamestarter-openelec/blob/master/packages/frontend.tar.gz?raw=true
 # tar -xf /storage/downloads/frontend.tar.gz -C /storage/emulators/ -xz
 # mkdir /storage/.kodi/userdata/addon_data/plugin.program.advanced.launcher
-# ln -s /storage/.config/advancedlauncher/launchers.xml  /storage/.kodi/userdata/addon_data/plugin.program.advanced.launcher/launchers.xml
+# ln -s /storage/.config/advancedlauncher/ /storage/.kodi/userdata/addon_data/plugin.program.advanced.launcher
 # rm /storage/advanced.launcher.tar.gz
 # rm /storage/downloads/frontend.tar.gz
 
@@ -71,4 +74,4 @@ tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz
 mv /storage/.kodi/addons/script.gamestarter/resources/bin/installer.sh /storage/.kodi/addons/script.gamestarter/resources/bin/installer_done.sh 
 
 # end installation
-echo '::Gamestarter:: -> Installation completed, now reboot and enjoy!!'
+echo '::Gamestarter:: -> Installation completed, enjoy!!'
