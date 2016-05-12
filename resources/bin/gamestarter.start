@@ -47,9 +47,9 @@ case $1 in
 
    # cambiar el modo de TV a 1080 50h
     tvservice -e "CEA 31"
-    # $DIR/resources/bin/uae4arm -f $DIR/resources/bin/launchTemp.uae
+    $DIR/resources/bin/uae4arm -f $DIR/resources/bin/launchTemp.uae
     # to use retroarch uae4arm core instead of standalone emulator change previous line for the next one:
-    $DIR/resources/bin/retroarch -c $CONFIG_FILE -L $LIBRETRO_DIR/uae4arm_libretro.so $AMIGA_TEMP_FILE
+    # $DIR/resources/bin/retroarch -c $CONFIG_FILE -L $LIBRETRO_DIR/uae4arm_libretro.so $AMIGA_TEMP_FILE
 
 
   ;;
