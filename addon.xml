@@ -2,17 +2,17 @@
 <addon id="script.gamestarter" name="Gamestarter" version="2.0.0" provider-name="Bite Your Idols!">
   <requires>
     <import addon="xbmc.python" version="2.1.0"/>
-    <import addon="script.rom.collection.browser" version="2.1.2"/>
+    
   </requires>
-  <extension point="xbmc.python.script" library="default.py">
-    <provides>game</provides>
-  </extension>
+  <extension point="xbmc.python.pluginsource" library="default.py">
+		<provides>executable</provides>
+	</extension>
   <extension point="xbmc.addon.metadata">
     <summary lang="es">RetroArch Launcher for LibreELEC/OpenELEC</summary>
 		<description lang="en">Retrogaming installation for Raspberry Pi's Kodi 17 (LibreELEC8/OpenELEC8)</description>
     <disclaimer lang="en"></disclaimer>
     <language></language>
-    <platform>Raspberry Pi</platform>
+    <platform>all</platform>
     <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
     <forum></forum>
     <website>https://github.com/bite-your-idols/gamestarter-openelec</website>
