@@ -4,7 +4,7 @@
     <import addon="xbmc.python" version="2.1.0"/>
     <import addon="script.rom.collection.browser" version="2.1.2"/>
   </requires>
-  <extension point="xbmc.python.script" library="addon.py">
+  <extension point="xbmc.python.script" library="default.py">
     <provides>game</provides>
   </extension>
   <extension point="xbmc.addon.metadata">
