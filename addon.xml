@@ -8,8 +8,10 @@
 		<provides>executable</provides>
 	</extension>
   <extension point="xbmc.addon.metadata">
-    <summary lang="es">RetroArch Launcher for LibreELEC/OpenELEC</summary>
-		<description lang="en">Retrogaming installation for Raspberry Pi's Kodi 17 (LibreELEC8/OpenELEC8)</description>
+    <summary lang="es">Retrogaming addon for Raspberry Pi's Kodi</summary>
+    <summary lang="en">Retrogaming addon for Raspberry Pi's Kodi</summary>
+		<description lang="es">Retrogaming addon for Raspberry Pi's Kodi</description>
+    <description lang="en">Launch retro games in your Raspberry Pi from Kodi using RetroArch, EmulationStation and more...</description>
     <disclaimer lang="en"></disclaimer>
     <language></language>
     <platform>all</platform>
