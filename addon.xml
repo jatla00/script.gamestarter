@@ -17,6 +17,6 @@
     <forum></forum>
     <website>https://github.com/bite-your-idols/gamestarter-openelec</website>
     <email></email>
-    <source></source>
+    <source>https://github.com/bite-your-idols/script.gamestarter/</source>
   </extension>
 </addon>
