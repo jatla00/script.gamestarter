@@ -1,11 +1,16 @@
 #!/bin/sh
 . /etc/profile
 
+# path to addon
+DIR="/storage/.kodi/addons/plugin.program.gamestarter"
+CONFIG_FILE="/storage/.config/retroarch/retroarch.cfg"
+LIBRETRO_DIR="/storage/.config/retroarch/cores"
+
 # Stop KODI
 systemctl stop kodi
 
 # Enable ALSA
-modprobe snd_bcm2835
+# modprobe snd_bcm2835
 
 # Enable libCEC
 # case $1 in
@@ -16,11 +21,14 @@ modprobe snd_bcm2835
 # Launch emulator
 case $1 in
   "retroarch")  
-      /storage/emulators/retroarch/retroarch -c /storage/emulators/retroarch/retroarch.cfg --menu
+      # /storage/emulators/retroarch/retroarch -c /storage/emulators/retroarch/retroarch.cfg --menu
+      # /storage/.kodi/addons/plugin.program.gamestarter/resources/bin/retroarch -c /storage/.kodi/addons/plugin.program.gamestarter/resources/bin/retroarch.cfg --menu 
+      $DIR/resources/bin/retroarch -c $CONFIG_FILE --menu
   ;;
   "emulationstation")  
-      /storage/emulators/emulationstation/emulationstation --no-splash
+      # /storage/emulators/emulationstation/emulationstation --no-splash
       # /storage/emulators/emulationstation/emulationstation --no-splash --ignore-gamelist
+      $DIR/resources/bin/emulationstation --no-splash
   ;;
    "ports")  
       # si es un port ejecutamos su sh
@@ -29,35 +37,36 @@ case $1 in
   ;;
   "amiga") 
     # crear el archivo uae temporal para el adf seleccionado
-    cp /storage/emulators/uae4arm/conf/gamestarter.uae /storage/emulators/uae4arm/conf/launchTemp.uae
-    echo 'floppy0='$2 >> /storage/emulators/uae4arm/conf/launchTemp.uae
-    echo 'floppy0type=0' >> /storage/emulators/uae4arm/conf/launchTemp.uae
+    cp $DIR/resources/bin/gamestarter.uae $DIR/resources/bin/launchTemp.uae
+    echo 'floppy0='$2 >> $DIR/resources/bin/launchTemp.uae
+    echo 'floppy0type=0' >> $DIR/resources/bin/launchTemp.uae
     
     # checkeamos si es multidisco (_DISK)
 	if echo "$2" | grep -q "_Disk"; then
 		#echo "multi!";
 		name=${2%_Disk*}
-		echo 'floppy1='$name'_Disk2.adf' >> /storage/emulators/uae4arm/conf/launchTemp.uae
-		echo 'floppy1type=0' >> /storage/emulators/uae4arm/conf/launchTemp.uae
-		echo 'floppy2='$name'_Disk3.adf' >> /storage/emulators/uae4arm/conf/launchTemp.uae
-		echo 'floppy2type=0' >> /storage/emulators/uae4arm/conf/launchTemp.uae
-		echo 'floppy3='$name'_Disk4.adf' >> /storage/emulators/uae4arm/conf/launchTemp.uae
-		echo 'floppy3type=0' >> /storage/emulators/uae4arm/conf/launchTemp.uae
-		echo 'nr_floppies=4' >> /storage/emulators/uae4arm/conf/launchTemp.uae
+		echo 'floppy1='$name'_Disk2.adf' >> $DIR/resources/bin/launchTemp.uae
+		echo 'floppy1type=0' >> $DIR/resources/bin/launchTemp.uae
+		echo 'floppy2='$name'_Disk3.adf' >> $DIR/resources/bin/launchTemp.uae
+		echo 'floppy2type=0' >> $DIR/resources/bin/launchTemp.uae
+		echo 'floppy3='$name'_Disk4.adf' >> $DIR/resources/bin/launchTemp.uae
+		echo 'floppy3type=0' >> $DIR/resources/bin/launchTemp.uae
+		echo 'nr_floppies=4' >> $DIR/resources/bin/launchTemp.uae
 	else
-		echo 'nr_floppies=1' >> /storage/emulators/uae4arm/conf/launchTemp.uae
+		echo 'nr_floppies=1' >> $DIR/resources/bin/launchTemp.uae
 	fi
 
    	# cambiar el modo de TV a 1080 50h
     tvservice -e "CEA 31"
-    /storage/emulators/uae4arm/uae4arm -f /storage/emulators/uae4arm/conf/launchTemp.uae
+    # $DIR/resources/bin/uae4arm -f $DIR/resources/bin/launchTemp.uae
     # to use retroarch uae4arm core instead of standalone emulator change previous line for the next one:
+    $DIR/resources/bin/retroarch -c $CONFIG_FILE -L $LIBRETRO_DIR/uae4arm_libretro.so $DIR/resources/bin/launchTemp.uae
     # /storage/emulators/retroarch/retroarch -c /storage/emulators/retroarch/retroarch.cfg -L /storage/emulators/retroarch/cores/uae4arm_libretro.so /storage/emulators/uae4arm/conf/launchTemp.uae
 
 
   ;;
    *) 
-    /storage/emulators/retroarch/retroarch -c /storage/emulators/retroarch/retroarch.cfg -L /storage/emulators/retroarch/cores/$1_libretro.so "$2"
+    $DIR/resources/bin/retroarch -c $CONFIG_FILE -L $LIBRETRO_DIR/$1_libretro.so "$2"
    ;;
 esac
 
@@ -65,12 +74,12 @@ esac
 # pkill libcec-daemon
 
 # Disable ALSA
-rmmod snd_bcm2835
+# rmmod snd_bcm2835
 
 # Reset resolution to standard y borrar uae temporal
 case $1 in
   "amiga") 
-    rm /storage/emulators/uae4arm/conf/launchTemp.uae
+    rm $DIR/resources/bin/launchTemp.uae
     tvservice -p
   ;;
 esac
