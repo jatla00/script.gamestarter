@@ -1,6 +1,6 @@
 #!/bin/sh
 . /etc/profile
 
-DIR="/storage/.kodi/addons/plugin.program.gamestarter"
+DIR="/storage/.kodi/addons/script.gamestarter"
 
 systemd-run $DIR/resources/bin/gamestarter.start "$@"
