@@ -1,10 +1,8 @@
 #!/bin/bash
-# Script for downloading and installing Gamestarter
+# Script for installing Gamestarter
 
 #Welcome message
-echo '*******************************************************************************' 
 echo 'Installing Gamestarter v-1.0.1' 
-echo '*******************************************************************************'
 
 # hacer ejecutables los scripts y binarios
 chmod a+x /storage/.kodi/addons/script.gamestarter/resources/bin/gamestarter.sh
@@ -15,6 +13,9 @@ chmod a+x /storage/.kodi/addons/script.gamestarter/resources/bin/uae4arm
 
 #copiar los packages de data a .config
 tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/retroarch.tar.gz -C /storage/.config/ -xz
+tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part1.tar.gz -C /storage/.config/retroarch/cores/ -xz
+tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part2.tar.gz -C /storage/.config/retroarch/cores/ -xz
+tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part3.tar.gz -C /storage/.config/retroarch/cores/ -xz
 tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/emulationstation.tar.gz -C /storage/.config/ -xz
 tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz -C /storage/ -xz
 
@@ -23,12 +24,12 @@ tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz
 #wget --no-check-certificate -O /storage/retroarch.tar.gz https://github.com/bite-your-idols/gamestarter-openelec/blob/master/packages/retroarch.tar.gz?raw=true
 #tar -xf /storage/downloads/retroarch.tar.gz -C /storage/emulators/ -xz
 #rm /storage/retroarch.tar.gz
-wget --no-check-certificate -O /storage/libretro-part1.tar.gz https://github.com/bite-your-idols/gamestarter-openelec/blob/master/packages/libretro-part1.tar.gz?raw=true
-tar -xf /storage/libretro-part1.tar.gz -C /storage/.config/retroarch/cores/ -xz
-wget --no-check-certificate -O /storage/libretro-part2.tar.gz https://github.com/bite-your-idols/gamestarter-openelec/blob/master/packages/libretro-part2.tar.gz?raw=true
-tar -xf /storage/downloads/libretro-part2.tar.gz -C /storage/.config/retroarch/cores/ -xz
-rm /storage/libretro-part1.tar.gz
-rm /storage/libretro-part2.tar.gz
+# wget --no-check-certificate -O /storage/libretro-part1.tar.gz https://github.com/bite-your-idols/gamestarter-openelec/blob/master/packages/libretro-part1.tar.gz?raw=true
+# tar -xf /storage/libretro-part1.tar.gz -C /storage/.config/retroarch/cores/ -xz
+# wget --no-check-certificate -O /storage/libretro-part2.tar.gz https://github.com/bite-your-idols/gamestarter-openelec/blob/master/packages/libretro-part2.tar.gz?raw=true
+# tar -xf /storage/downloads/libretro-part2.tar.gz -C /storage/.config/retroarch/cores/ -xz
+# rm /storage/libretro-part1.tar.gz
+# rm /storage/libretro-part2.tar.gz
 
 # amiga
 # wget --no-check-certificate -O /storage/downloads/uae4arm.tar.gz https://github.com/bite-your-idols/gamestarter-openelec/blob/master/packages/uae4arm.tar.gz?raw=true
@@ -59,6 +60,15 @@ rm /storage/libretro-part2.tar.gz
 mount -o remount,rw /flash
 echo 'dtparam=audio=on' >> /flash/config.txt
 
-# end installation
+# borramos los zips de data y renombramos el instalador
+rm /storage/.kodi/addons/script.gamestarter/resources/data/retroarch.tar.gz
+rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part1.tar.gz
+rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part2.tar.gz
+rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part3.tar.gz
+rm /storage/.kodi/addons/script.gamestarter/resources/data/emulationstation.tar.gz
+rm /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz
+
 mv /storage/.kodi/addons/script.gamestarter/resources/bin/installer.sh /storage/.kodi/addons/script.gamestarter/resources/bin/installer_done.sh 
+
+# end installation
 echo '::Gamestarter:: -> Installation completed, now reboot and enjoy!!'
