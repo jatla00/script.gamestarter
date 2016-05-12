@@ -2,33 +2,22 @@
 . /etc/profile
 
 # path to addon
-DIR="/storage/.kodi/addons/plugin.program.gamestarter"
+DIR="/storage/.kodi/addons/script.gamestarter"
 CONFIG_FILE="/storage/.config/retroarch/retroarch.cfg"
 LIBRETRO_DIR="/storage/.config/retroarch/cores"
+AMIGA_TEMP_FILE=$DIR/resources/bin/launchTemp.uae
 
 # Stop KODI
 systemctl stop kodi
 
-# Enable ALSA
-# modprobe snd_bcm2835
-
-# Enable libCEC
-# case $1 in
-  # "start") echo 'libCEC';;
-  # *)/storage/.kodi/addons/script.libcec.daemon/bin/libcec-daemon -q & ;;
-# esac
-
 # Launch emulator
 case $1 in
   "retroarch")  
-      # /storage/emulators/retroarch/retroarch -c /storage/emulators/retroarch/retroarch.cfg --menu
-      # /storage/.kodi/addons/plugin.program.gamestarter/resources/bin/retroarch -c /storage/.kodi/addons/plugin.program.gamestarter/resources/bin/retroarch.cfg --menu 
       $DIR/resources/bin/retroarch -c $CONFIG_FILE --menu
   ;;
   "emulationstation")  
-      # /storage/emulators/emulationstation/emulationstation --no-splash
       # /storage/emulators/emulationstation/emulationstation --no-splash --ignore-gamelist
-      $DIR/resources/bin/emulationstation --no-splash
+      $DIR/resources/bin/emulationstation
   ;;
    "ports")  
       # si es un port ejecutamos su sh
@@ -37,31 +26,30 @@ case $1 in
   ;;
   "amiga") 
     # crear el archivo uae temporal para el adf seleccionado
-    cp $DIR/resources/bin/gamestarter.uae $DIR/resources/bin/launchTemp.uae
-    echo 'floppy0='$2 >> $DIR/resources/bin/launchTemp.uae
-    echo 'floppy0type=0' >> $DIR/resources/bin/launchTemp.uae
+    cp $DIR/resources/bin/gamestarter.uae $AMIGA_TEMP_FILE
+    echo 'floppy0='$2 >> $AMIGA_TEMP_FILE
+    echo 'floppy0type=0' >> $AMIGA_TEMP_FILE
     
     # checkeamos si es multidisco (_DISK)
 	if echo "$2" | grep -q "_Disk"; then
 		#echo "multi!";
 		name=${2%_Disk*}
-		echo 'floppy1='$name'_Disk2.adf' >> $DIR/resources/bin/launchTemp.uae
-		echo 'floppy1type=0' >> $DIR/resources/bin/launchTemp.uae
-		echo 'floppy2='$name'_Disk3.adf' >> $DIR/resources/bin/launchTemp.uae
-		echo 'floppy2type=0' >> $DIR/resources/bin/launchTemp.uae
-		echo 'floppy3='$name'_Disk4.adf' >> $DIR/resources/bin/launchTemp.uae
-		echo 'floppy3type=0' >> $DIR/resources/bin/launchTemp.uae
-		echo 'nr_floppies=4' >> $DIR/resources/bin/launchTemp.uae
+		echo 'floppy1='$name'_Disk2.adf' >> $AMIGA_TEMP_FILE
+		echo 'floppy1type=0' >> $AMIGA_TEMP_FILE
+		echo 'floppy2='$name'_Disk3.adf' >> $AMIGA_TEMP_FILE
+		echo 'floppy2type=0' >> $AMIGA_TEMP_FILE
+		echo 'floppy3='$name'_Disk4.adf' >> $AMIGA_TEMP_FILE
+		echo 'floppy3type=0' >> $AMIGA_TEMP_FILE
+		echo 'nr_floppies=4' >> $AMIGA_TEMP_FILE
 	else
-		echo 'nr_floppies=1' >> $DIR/resources/bin/launchTemp.uae
+		echo 'nr_floppies=1' >> $AMIGA_TEMP_FILE
 	fi
 
-   	# cambiar el modo de TV a 1080 50h
+   # cambiar el modo de TV a 1080 50h
     tvservice -e "CEA 31"
     # $DIR/resources/bin/uae4arm -f $DIR/resources/bin/launchTemp.uae
     # to use retroarch uae4arm core instead of standalone emulator change previous line for the next one:
-    $DIR/resources/bin/retroarch -c $CONFIG_FILE -L $LIBRETRO_DIR/uae4arm_libretro.so $DIR/resources/bin/launchTemp.uae
-    # /storage/emulators/retroarch/retroarch -c /storage/emulators/retroarch/retroarch.cfg -L /storage/emulators/retroarch/cores/uae4arm_libretro.so /storage/emulators/uae4arm/conf/launchTemp.uae
+    $DIR/resources/bin/retroarch -c $CONFIG_FILE -L $LIBRETRO_DIR/uae4arm_libretro.so $AMIGA_TEMP_FILE
 
 
   ;;
@@ -70,16 +58,10 @@ case $1 in
    ;;
 esac
 
-# Disable libCEC
-# pkill libcec-daemon
-
-# Disable ALSA
-# rmmod snd_bcm2835
-
 # Reset resolution to standard y borrar uae temporal
 case $1 in
   "amiga") 
-    rm $DIR/resources/bin/launchTemp.uae
+    rm $AMIGA_TEMP_FILE
     tvservice -p
   ;;
 esac
