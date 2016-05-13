@@ -4,6 +4,9 @@
 #Welcome message
 echo 'Installing Gamestarter v-2.0' 
 
+#dependiedo del OS seleccionamos un retroarch u otro
+mv /storage/.kodi/addons/script.gamestarter/resources/bin/retroarch-kodi15 /storage/.kodi/addons/script.gamestarter/resources/bin/retroarch
+
 # hacer ejecutables los scripts y binarios
 chmod a+x /storage/.kodi/addons/script.gamestarter/resources/bin/gamestarter.sh
 chmod a+x /storage/.kodi/addons/script.gamestarter/resources/bin/gamestarter.start
@@ -21,6 +24,30 @@ tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz
 tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/advancedlauncher.tar.gz -C /storage/.config/ -xz
 
 ln -s /storage/.config/advancedlauncher/ /storage/.kodi/userdata/addon_data/plugin.program.advanced.launcher
+
+# instalar advanced launcher a manopla, en kodi 17 habria que activarlo
+wget --no-check-certificate -O /storage/advanced.launcher.tar.gz https://github.com/bite-your-idols/advanced-launcher/archive/2.5.8.tar.gz
+tar -xf /storage/advanced.launcher.tar.gz -C /storage/.kodi/addons/ -xz
+rm /storage/advanced.launcher.tar.gz
+
+# añadir audio al config.txt
+# mount -o remount,rw /flash
+# echo 'dtparam=audio=on' >> /flash/config.txt
+
+# borramos los zips de data y renombramos el instalador
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/retroarch.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part1.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part2.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part3.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/emulationstation.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/advancedlauncher.tar.gz
+
+mv /storage/.kodi/addons/script.gamestarter/resources/bin/installer.sh /storage/.kodi/addons/script.gamestarter/resources/bin/installer_done.sh 
+
+# end installation
+echo '::Gamestarter:: -> Installation completed, enjoy!!'
+
 
 # descargar packages
 # retroarch y cores
@@ -49,8 +76,7 @@ ln -s /storage/.config/advancedlauncher/ /storage/.kodi/userdata/addon_data/plug
 # chmod a+x /storage/emulators/emulationstation/emulationstation
 
 # instalar advanced launcher, launchers.xml/symlink y caratulas
-# wget --no-check-certificate -O /storage/downloads/advanced.launcher.tar.gz https://github.com/bite-your-idols/advanced-launcher/archive/2.5.8.tar.gz
-# wget --no-check-certificate -O /storage/advanced.launcher.tar.gz https://github.com/bite-your-idols/gamestarter-openelec/raw/master/packages/advanced-launcher-master.tar.gz
+# wget --no-check-certificate -O /storage/advanced.launcher.tar.gz https://github.com/bite-your-idols/advanced-launcher/archive/2.5.8.tar.gz
 # tar -xf /storage/advanced.launcher.tar.gz -C /storage/.kodi/addons/ -xz
 # wget --no-check-certificate -O /storage/downloads/frontend.tar.gz https://github.com/bite-your-idols/gamestarter-openelec/blob/master/packages/frontend.tar.gz?raw=true
 # tar -xf /storage/downloads/frontend.tar.gz -C /storage/emulators/ -xz
@@ -58,20 +84,3 @@ ln -s /storage/.config/advancedlauncher/ /storage/.kodi/userdata/addon_data/plug
 # ln -s /storage/.config/advancedlauncher/ /storage/.kodi/userdata/addon_data/plugin.program.advanced.launcher
 # rm /storage/advanced.launcher.tar.gz
 # rm /storage/downloads/frontend.tar.gz
-
-# añadir audio al config.txt
-# mount -o remount,rw /flash
-# echo 'dtparam=audio=on' >> /flash/config.txt
-
-# borramos los zips de data y renombramos el instalador
-# rm /storage/.kodi/addons/script.gamestarter/resources/data/retroarch.tar.gz
-# rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part1.tar.gz
-# rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part2.tar.gz
-# rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part3.tar.gz
-# rm /storage/.kodi/addons/script.gamestarter/resources/data/emulationstation.tar.gz
-# rm /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz
-
-mv /storage/.kodi/addons/script.gamestarter/resources/bin/installer.sh /storage/.kodi/addons/script.gamestarter/resources/bin/installer_done.sh 
-
-# end installation
-echo '::Gamestarter:: -> Installation completed, enjoy!!'
