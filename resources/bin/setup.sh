@@ -43,7 +43,7 @@ rm /storage/advanced.launcher.tar.gz
 # rm /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz
 # rm /storage/.kodi/addons/script.gamestarter/resources/data/advancedlauncher.tar.gz
 
-mv /storage/.kodi/addons/script.gamestarter/resources/bin/installer.sh /storage/.kodi/addons/script.gamestarter/resources/bin/installer_done.sh 
+mv /storage/.kodi/addons/script.gamestarter/resources/bin/setup.sh /storage/.kodi/addons/script.gamestarter/resources/bin/setup_done.sh 
 
 # end installation
 echo '::Gamestarter:: -> Installation completed, enjoy!!'
