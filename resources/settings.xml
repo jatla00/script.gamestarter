@@ -1,23 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <settings>
-
-	<category label="Launcher">
-		<setting id="frontend" type="select" label="Default Frontend" values="RetroArch|EmulationStation" default="RetroArch" />
-        <setting type="sep"/>
-        <setting id="ask" type="bool" label="Ask for confimation" default="true"/>
-        
-    </category>
-    <category label="Acciones">
-    	<setting label="Actualizar Libretro-cores" type="action" action="RunScript(my.addon.id, downloadreport)"/>
-        <setting label="Desinstalar" type="action" action="RunScript(my.addon.id, downloadreport)"/>
-    </category>
-    <category label="Addons">
-    	<setting label="Download Internet Archive ROM Launcher" type="action" action="RunScript(my.addon.id, downloadreport)"/>
-        <setting label="Download Super Favourites" type="action" action="RunScript(my.addon.id, downloadreport)"/>
-        <setting label="Download Advanced Launcher" type="action" action="RunScript(my.addon.id, downloadreport)"/>
-    </category>
-
-
+	<category label="Gamestarter">
+		<setting id="frontend" type="select" label="Select you default frontend" values="RetroArch|EmulationStation" default="RetroArch" />
+        	<setting id="ask" type="bool" label="Ask for confimation at exit kodi" default="true"/>
+        	<setting type="sep"/>
+        	<setting label="Download AdvancedLauncher" type="action" action="RunScript(my.addon.id, downloadreport)"/>
+        	<setting label="Download Internet Archive ROM Launcher" type="action" action="RunScript(my.addon.id, downloadreport)"/>
+        	<setting label="Download Super Favourites" type="action" action="RunScript(my.addon.id, downloadreport)"/>
+        	<setting type="sep"/>
+        	<setting label="Update libretro-cores" type="action" action="RunScript(my.addon.id, downloadreport)"/>
+        </category>
+        <!--<category label="Maintenance">
+        	<setting label="Clean installation files" type="action" action="RunScript(my.addon.id, downloadreport)"/>
+    		<setting label="Update libretro-cores" type="action" action="RunScript(my.addon.id, downloadreport)"/>
+        	<setting label="Remove addon" type="action" action="RunScript(my.addon.id, downloadreport)"/>
+    	</category>-->
 
 
     <!-- <category label="32001">
