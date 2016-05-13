@@ -27,6 +27,9 @@ tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/emulationstation
 tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz -C /storage/ -xz
 tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/advancedlauncher.tar.gz -C /storage/.config/ -xz
 
+chmod a+x /storage/emulators/roms/ports/CaveStory.sh
+chmod a+x /storage/emulators/roms/ports/Dinothawr.sh
+
 ln -s /storage/.config/advancedlauncher/ /storage/.kodi/userdata/addon_data/plugin.program.advanced.launcher
 
 # instalar advanced launcher a manopla, en kodi 17 habria que activarlo
