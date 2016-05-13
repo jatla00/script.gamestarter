@@ -4,11 +4,12 @@
 		<setting id="frontend" type="select" label="Select you default frontend" values="RetroArch|EmulationStation" default="RetroArch" />
         	<setting id="ask" type="bool" label="Ask for confimation at exit kodi" default="true"/>
         	<setting type="sep"/>
-        	<setting label="Download AdvancedLauncher" type="action" action="RunScript(my.addon.id, downloadreport)"/>
-        	<setting label="Download Internet Archive ROM Launcher" type="action" action="System.Exec(/storage/.kodi/addons/script.gamestarter/resources/bin/install_iarl.sh)"/>
-        	<setting label="Install GameMaker Pi ports" type="action" action="System.ExecWait(/storage/.kodi/addons/script.gamestarter/resources/bin/install_gamemaker.sh)"/>
+        	<!--<setting label="Download AdvancedLauncher" type="action" action="RunScript(my.addon.id, downloadreport)"/>-->
+        	<setting label="Install Internet Archive ROM Launcher" type="action" action="System.Exec(/storage/.kodi/addons/script.gamestarter/resources/bin/install_iarl.sh)"/>
+        	<setting label="Install GameMaker Pi ports" type="action" action="System.Exec(/storage/.kodi/addons/script.gamestarter/resources/bin/install_gamemaker.sh)"/>
         	<setting type="sep"/>
-        	<setting label="Update libretro-cores" type="action" action="XBMC.System.Exec(/storage/.kodi/addons/script.gamestarter/resources/bin/update.sh)"/>
+        	<!--<setting label="Update libretro-cores" type="action" action="RunScript(/storage/.kodi/addons/script.gamestarter/resources/bin/done.py, SetLocation)"/>-->
+        	<setting label="Update libretro-cores" type="action" action="System.Exec(/storage/.kodi/addons/script.gamestarter/resources/bin/update.sh)"/>
         </category>
         <!--<category label="Maintenance">
         	<setting label="Clean installation files" type="action" action="RunScript(my.addon.id, downloadreport)"/>
