@@ -35,6 +35,8 @@ chmod +x /storage/.config/autostart.sh
 chmod a+x /storage/.kodi/addons/script.hacklib-master/bin/hacklib
 rm /storage/script.hacklib.tar.gz
 
+mv /storage/.kodi/addons/script.gamestarter/resources/bin/install_gamemaker.sh /storage/.kodi/addons/script.gamestarter/resources/bin/install_gamemaker_done.sh 
+
 # end installation
 # echo 'Installation completed!! Now you must reboot...'
 kodi-send --action=Notification"(Gamestarter,GameMaker Pi ports installed,2000,/storage/.kodi/addons/script.gamestarter/icon.png)"
