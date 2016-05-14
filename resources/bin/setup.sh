@@ -5,7 +5,7 @@
 echo 'SetUp Gamestarter v-2.0' 
 
 #dependiedo del OS seleccionamos un retroarch u otro
-mv /storage/.kodi/addons/script.gamestarter/resources/bin/retroarch-kodi15 /storage/.kodi/addons/script.gamestarter/resources/bin/retroarch
+# mv /storage/.kodi/addons/script.gamestarter/resources/bin/retroarch-kodi15 /storage/.kodi/addons/script.gamestarter/resources/bin/retroarch
 
 # hacer ejecutables los scripts y binarios
 chmod a+x /storage/.kodi/addons/script.gamestarter/resources/bin/gamestarter.sh
@@ -42,15 +42,16 @@ mount -o remount,rw /flash
 echo 'dtparam=audio=on' >> /flash/config.txt
 
 # borramos los zips de data y renombramos el instalador
-rm /storage/.kodi/addons/script.gamestarter/resources/data/retroarch.tar.gz
-rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part1.tar.gz
-rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part2.tar.gz
-rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part3.tar.gz
-rm /storage/.kodi/addons/script.gamestarter/resources/data/emulationstation.tar.gz
-rm /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz
-rm /storage/.kodi/addons/script.gamestarter/resources/data/advancedlauncher.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/retroarch.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part1.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part2.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/libretro-part3.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/emulationstation.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/advancedlauncher.tar.gz
 
-mv /storage/.kodi/addons/script.gamestarter/resources/bin/setup.sh /storage/.kodi/addons/script.gamestarter/resources/bin/setup_done.sh 
+touch /storage/.kodi/addons/script.gamestarter/resources/bin/setup_done
+# mv /storage/.kodi/addons/script.gamestarter/resources/bin/setup.sh /storage/.kodi/addons/script.gamestarter/resources/bin/setup_done.sh 
 
 # end installation
 echo '::Gamestarter:: -> Installation completed, enjoy!!'
