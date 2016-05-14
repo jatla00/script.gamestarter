@@ -2,7 +2,7 @@
 # Script for installing Gamestarter
 
 #Welcome message
-echo 'SetUp Gamestarter v-2.0' 
+echo 'Gamestarter v-2.0' 
 
 #dependiedo del OS seleccionamos un retroarch u otro
 # mv /storage/.kodi/addons/script.gamestarter/resources/bin/retroarch-kodi15 /storage/.kodi/addons/script.gamestarter/resources/bin/retroarch
