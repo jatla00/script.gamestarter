@@ -11,7 +11,7 @@ script_file = os.path.realpath(__file__)
 directory = os.path.dirname(script_file)
 
 # primero habria que comprobar si es la priemra vez que se lanza entonces hacer la instalacion:
-if os.path.isfile(directory+"/resources/bin/setup_done") == False: 
+if os.path.isfile(directory+"/resources/bin/installed") == False: 
  	xbmcgui.Dialog().ok(addonname, "This is the first time you run Gamestarter. We are going to make a first-time-setup, please do not switch off your Raspberry Pi until process is finished.")
  	os.system("sh "+directory+"/resources/bin/setup.sh")
  	xbmcgui.Dialog().ok(addonname, "Done. Please reboot, copy your roms and system bios and enjoy!")
