@@ -18,3 +18,5 @@ directory = os.path.dirname(script_file)
 
 os.system("sh  /storage/.kodi/addons/script.gamestarter/resources/bin/install.sh")
 
+xbmcgui.Dialog().ok(addonname, "Re-installation done. Please, reboot and enjoy!")
+
