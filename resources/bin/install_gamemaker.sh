@@ -4,7 +4,6 @@
 # wget --no-check-certificate -O /storage/install-gamemaker-openelec.sh https://raw.githubusercontent.com/bite-your-idols/gamemaker-openelec/master/gamemaker-openelec.sh && sh /storage/install-gamemaker-openelec.sh
 
 #  echo 'Installing Gamemaker Pi games in Openelec' 
-
 wget --no-check-certificate -O /storage/MalditaCastilla.tar.gz https://www.yoyogames.com/download/pi/castilla
 wget --no-check-certificate -O /storage/SuperCrateBox.tar.gz https://www.yoyogames.com/download/pi/crate
 wget --no-check-certificate -O /storage/TheyNeedToBeFed.tar.gz https://www.yoyogames.com/download/pi/tntbf
@@ -12,9 +11,9 @@ wget --no-check-certificate -O /storage/TheyNeedToBeFed.tar.gz https://www.yoyog
 tar xvzf /storage/MalditaCastilla.tar.gz -C /storage/emulators/roms/ports/
 tar xvzf /storage/SuperCrateBox.tar.gz -C /storage/emulators/roms/ports/
 tar xvzf /storage/TheyNeedToBeFed.tar.gz -C /storage/emulators/roms/ports/
-wget --no-check-certificate -O /storage/emulators/roms/ports/MalditaCastilla.sh https://raw.githubusercontent.com/bite-your-idols/gamemaker-openelec/master/scripts/MalditaCastilla.sh
-wget --no-check-certificate -O /storage/emulators/roms/ports/SuperCrateBox.sh https://raw.githubusercontent.com/bite-your-idols/gamemaker-openelec/master/scripts/SuperCrateBox.sh
-wget --no-check-certificate -O /storage/emulators/roms/ports/TheyNeedToBeFed.sh https://raw.githubusercontent.com/bite-your-idols/gamemaker-openelec/master/scripts/TheyNeedToBeFed.sh
+
+
+tar -xf /storage/.kodi/addons/script.gamestarter/resources/data/gamemaker.tar.gz -C /storage/emulators/roms/ports/ -xz
 chmod a+x /storage/emulators/roms/ports/MalditaCastilla.sh
 chmod a+x /storage/emulators/roms/ports/SuperCrateBox.sh
 chmod a+x /storage/emulators/roms/ports/TheyNeedToBeFed.sh
@@ -22,6 +21,7 @@ chmod a+x /storage/emulators/roms/ports/TheyNeedToBeFed.sh
 rm /storage/MalditaCastilla.tar.gz
 rm /storage/SuperCrateBox.tar.gz
 rm /storage/TheyNeedToBeFed.tar.gz
+rm /storage/.kodi/addons/script.gamestarter/resources/data/gamemaker.tar.gz
 
 wget --no-check-certificate -O /storage/gamemaker-libs.tar.gz https://github.com/bite-your-idols/gamemaker-openelec/raw/master/packages/gamemaker-libs.tar.gz?raw=true
 tar -xf /storage/gamemaker-libs.tar.gz -C /storage/ -xz
