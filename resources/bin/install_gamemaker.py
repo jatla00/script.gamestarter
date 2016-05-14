@@ -2,7 +2,7 @@ import os
 import os.path
 
 import xbmcgui
-import os
+
 
 
 xbmcgui.Dialog().ok("Gamestarter", "Installing GameMaker Pi ports, please dont power off your Raspberry Pi until process is done.")
