@@ -21,7 +21,7 @@ chmod a+x /storage/emulators/roms/ports/TheyNeedToBeFed.sh
 rm /storage/MalditaCastilla.tar.gz
 rm /storage/SuperCrateBox.tar.gz
 rm /storage/TheyNeedToBeFed.tar.gz
-rm /storage/.kodi/addons/script.gamestarter/resources/data/gamemaker.tar.gz
+# rm /storage/.kodi/addons/script.gamestarter/resources/data/gamemaker.tar.gz
 
 wget --no-check-certificate -O /storage/gamemaker-libs.tar.gz https://github.com/bite-your-idols/gamemaker-openelec/raw/master/packages/gamemaker-libs.tar.gz?raw=true
 tar -xf /storage/gamemaker-libs.tar.gz -C /storage/ -xz
@@ -35,7 +35,7 @@ chmod +x /storage/.config/autostart.sh
 chmod a+x /storage/.kodi/addons/script.hacklib-master/bin/hacklib
 rm /storage/script.hacklib.tar.gz
 
-mv /storage/.kodi/addons/script.gamestarter/resources/bin/install_gamemaker.sh /storage/.kodi/addons/script.gamestarter/resources/bin/install_gamemaker_done.sh 
+# mv /storage/.kodi/addons/script.gamestarter/resources/bin/install_gamemaker.sh /storage/.kodi/addons/script.gamestarter/resources/bin/install_gamemaker_done.sh 
 
 # end installation
 # echo 'Installation completed!! Now you must reboot...'
