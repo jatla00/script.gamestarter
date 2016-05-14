@@ -50,7 +50,7 @@ echo 'dtparam=audio=on' >> /flash/config.txt
 # rm /storage/.kodi/addons/script.gamestarter/resources/data/emulators.tar.gz
 # rm /storage/.kodi/addons/script.gamestarter/resources/data/advancedlauncher.tar.gz
 
-touch /storage/.kodi/addons/script.gamestarter/resources/bin/setup_done
+touch /storage/.kodi/addons/script.gamestarter/resources/bin/installation_done
 # mv /storage/.kodi/addons/script.gamestarter/resources/bin/setup.sh /storage/.kodi/addons/script.gamestarter/resources/bin/setup_done.sh 
 
 # end installation
