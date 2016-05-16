@@ -14,7 +14,7 @@ directory = os.path.dirname(script_file)
 if os.path.isfile(directory+"/resources/bin/installed") == False: 
  	xbmcgui.Dialog().ok(addonname, "This is the first time you run Gamestarter. We are going to make a first-time-setup, please do not switch off your Raspberry Pi until process is finished.")
  	os.system("sh "+directory+"/resources/bin/install.sh")
- 	xbmcgui.Dialog().ok(addonname, "Done. Please reboot, copy your roms and system bios and enjoy!")
+ 	xbmcgui.Dialog().ok(addonname, "Done. Copy your roms & system bios and enjoy!")
 
 # las siguientes veces directamente lanzariamos RetroArch o Emulationstation
 else:
