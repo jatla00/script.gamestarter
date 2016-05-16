@@ -19,7 +19,7 @@ if os.path.isfile(directory+"/resources/bin/installed") == False:
 # las siguientes veces directamente lanzariamos RetroArch o Emulationstation
 else:
 	frontend = xbmcplugin.getSetting(int(sys.argv[1]),'frontend')
-	resultado = xbmcgui.Dialog().yesno("Gamestarter Launcher", "Exit Kodi and run "+frontend+"?");
+	resultado = xbmcgui.Dialog().yesno("Gamestarter", "Exit Kodi and run "+frontend+"?");
 	if resultado:
 		if frontend=="EmulationStation":
 			os.system(directory+"/resources/bin/gamestarter.sh emulationstation")
