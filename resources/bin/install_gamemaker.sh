@@ -39,4 +39,4 @@ rm /storage/script.hacklib.tar.gz
 
 # end installation
 # echo 'Installation completed!! Now you must reboot...'
-kodi-send --action=Notification"(Gamestarter,GameMaker Pi ports installed,2000,/storage/.kodi/addons/script.gamestarter/icon.png)"
+# kodi-send --action=Notification"(Gamestarter,GameMaker Pi ports installed,2000,/storage/.kodi/addons/script.gamestarter/icon.png)"
