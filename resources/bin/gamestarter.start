@@ -11,7 +11,7 @@ AMIGA_TEMP_FILE=$DIR/resources/bin/launchTemp.uae
 systemctl stop kodi
 
 # Enable ALSA
-# modprobe snd_bcm2835
+modprobe snd_bcm2835
 
 # Launch emulator
 case $1 in
@@ -62,7 +62,7 @@ case $1 in
 esac
 
 # Disable ALSA
-# rmmod snd_bcm2835
+rmmod snd_bcm2835
 
 # Reset resolution to standard y borrar uae temporal
 case $1 in
