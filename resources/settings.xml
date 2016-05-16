@@ -10,7 +10,7 @@
         	<setting label="Install GameMaker Pi ports" type="action" action="RunScript(/storage/.kodi/addons/script.gamestarter/resources/bin/install_gamemaker.py, SetLocation)"/>
         	<setting type="sep"/>
         	<!--<setting label="Update libretro-cores" type="action" action="RunScript(/storage/.kodi/addons/script.gamestarter/resources/bin/update.py, SetLocation)"/>-->
-        	<setting label="Re-installation Setup" type="action" action="RunScript(/storage/.kodi/addons/script.gamestarter/resources/bin/reinstall.py, SetLocation)"/>
+        	<!-- <setting label="Re-installation Setup" type="action" action="RunScript(/storage/.kodi/addons/script.gamestarter/resources/bin/reinstall.py, SetLocation)"/> -->
         </category>
         <!--<category label="Experimental">
         	<setting label="Use Libretro Amiga Core" type="action" action="RunScript(my.addon.id, downloadreport)"/>
