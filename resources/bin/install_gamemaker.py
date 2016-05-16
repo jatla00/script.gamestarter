@@ -15,3 +15,5 @@ directory = os.path.dirname(script_file)
 # os.system("sh "+directory+"/resources/bin/install_iarl.sh")
 
 os.system("sh  /storage/.kodi/addons/script.gamestarter/resources/bin/install_gamemaker.sh")
+
+xbmcgui.Dialog().ok("Gamestarter", "GameMaker Pi ports installed, please reboot your Raspberry Pi.")
