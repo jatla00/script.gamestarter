@@ -5,6 +5,8 @@ English/[Spanish](https://github.com/bite-your-idols/gamestarter-openelec/blob/m
 
 Follow me on [twitter](https://twitter.com/bite_your_idols).
 
+## Retrogamig addon for Raspberry Pi's Kodi.
+
 If you use a Raspberry Pi as a media center running Kodi on [LibreELEC](https://libreelec.tv/) or [OpenELEC](http://openelec.tv/), you like retrogaming and you want to launch games just as you do with movies and tv shows without dual-booting, swaping SD memories... Here you have the definitve solution.
 
 With this addon you will continue with your own customized Kodi but empowered including: 
