@@ -3,25 +3,24 @@
 
 English/[Spanish](https://github.com/bite-your-idols/gamestarter-openelec/blob/master/README-ES.md)
 
-Follow me on [twitter](https://twitter.com/bite_your_idols).
-
 ## Retrogamig addon for Raspberry Pi's Kodi.
 
-If you use a Raspberry Pi as a media center running Kodi on [LibreELEC](https://libreelec.tv/) or [OpenELEC](http://openelec.tv/), you like retrogaming and you want to launch games just as you do with movies and tv shows without dual-booting, swaping SD memories... Here you have the definitve solution.
+If you use a Raspberry Pi as a media center running Kodi on [LibreELEC](https://libreelec.tv/) or [OpenELEC](http://openelec.tv/), you like retrogaming and you want to launch games just as you do with movies and tv shows without dual-booting, swaping SD memories, complex installations... Here you have the definitve solution.
 
 With this addon you will continue with your own customized Kodi but empowered including: 
 - Retroarch multi-emulator frontend (updated to v1.3.4) with a launcher addon and joypad configs,
 - AdvancedLauncher addon with default emulator list and a custom skin,
-- Amiga UAE4ARM emulator,
 - Emulationstation frontend,
+- Amiga UAE4ARM emulator,
 - Some test freeware roms.
 
 Also, you will have the choice of one-click installation of:
 - Internet Archive ROM Launcheraddon to launch games from the "cloud",
 - 3 GameMaker Pi ports including modern masterpiece "Maldita Castilla".
 
-
 So, let's go!!
+
+>Follow me on [twitter](https://twitter.com/bite_your_idols).
 
 ## Installation Instructions
 Download the latest release of the addon from [Release Page](), copy into your Raspberry and select "install from zip" in Settings>Addons menu.  The first time the addon is launched it will perfomr some settings. Then copy your [roms and bios](https://github.com/libretro/Lakka/wiki/ROMs-and-BIOSes) to /storage/emulators/ folder via ftp or [samba](http://wiki.openelec.tv/index.php/Accessing_Samba_Shares) and reboot.
