@@ -1,5 +1,5 @@
 # Gamestarter v2
-![Gamestarter-logo](https://raw.githubusercontent.com/bite-your-idols/script.gamestarter/master/resources/media/gamestarter-logo.jpg)
+![Gamestarter-logo](https://github.com/bite-your-idols/script.gamestarter/raw/master/resources/media/gamestarter-logo-dark.jpg)
 
 English/[Spanish](https://github.com/bite-your-idols/gamestarter-openelec/blob/master/README-ES.md)
 
