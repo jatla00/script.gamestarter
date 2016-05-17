@@ -24,22 +24,25 @@ Also, you will have the choice of one-click installation of:
 ## Installation Instructions
 Download the latest release of the addon from [Release Page](), copy into your Raspberry Pi and select "install from zip" in Settings>Addons menu. The first time the addon is launched it will perform some settings. Then copy your [roms and bios](https://github.com/libretro/Lakka/wiki/ROMs-and-BIOSes) to /storage/emulators/ folder via ftp or [samba](http://wiki.openelec.tv/index.php/Accessing_Samba_Shares) and reboot.
 
-![screenshot-addon](https://raw.githubusercontent.com/bite-your-idols/script.gamestarter/master/resources/media/screenshot000.png)
-
 >Before installation I recommend to backup your system or create an image of your SD card using [USB Image Tool](http://www.alexpage.de/usb-image-tool/).
 >The addon has ben tested into OpenELEC 6, OpeneELEC 7 beta and LibreELEC 7 in a Raspberry Pi 2/3 model B and everything is working ok. I also recommend to read this whole text before installation to understand what is this all about.
 
+![screenshot-addon](https://raw.githubusercontent.com/bite-your-idols/script.gamestarter/master/resources/media/screenshot000.png)
+
+
 ##### Addon Settings 
 In addon settings you can define what frontend you want to use everytime you launch the addon, between RetroArch and EmulationStation.
+From there, you can also install Internet Archive ROM launcher and GameMaker Pi ports. More options coming...
+
 ![screenshot-addon-settings](https://github.com/bite-your-idols/script.gamestarter/raw/master/resources/media/screenshot003.png)
 
-From there, you can also install [Internet Archive ROM launcher](https://github.com/zach-morris/plugin.program.iarl/wiki) and [GameMaker Pi](http://yoyogames.com/pi) ports. More options coming...
 
 .
 
+
 ##### Pre-Installed image 
 You can download and write [this pre-installed image](https://goo.gl/l9X3rC) with OpenELEC into your SD card using [USB Image Tool](http://www.alexpage.de/usb-image-tool/). It includes some extras like custom splash screen and addon shortcuts on home page. After image boot you can expand your OpenELEC storage following [this workaround](forum.kodi.tv/showthread.php?tid=230353&pid=2166080#pid2166080). 
-This is based on old Gamestarter and OpenenELEC versions and I am not going to update any more, addon installation is so easy and if you want a kodi prebuild image with retrogaming setup there are other alternatives.
+This is based on old Gamestarter and OpenenELEC versions and I am not going to update any more, addon installation is so easy and if you want a kodi prebuilt image with retrogaming setup there are other alternatives.
 
 .
 
@@ -47,14 +50,11 @@ This is based on old Gamestarter and OpenenELEC versions and I am not going to u
 ## Frontends
 
 #### RetroArch:
-The easiest and fastest way of retrogaming is using [Retroarch](http://www.libretro.com/).
+The easiest and fastest way of retrogaming is using [Retroarch](http://www.libretro.com/). 
+The first time RetroArch is launched I recommend to update everything (Settings menu> Online Updater). Then you can create your own playlists, start games, change cores, user dynamic wallpapers, boxarts, update cores... just like in [Lakka](http://www.lakka.tv/) distro!!
 
 ![screenshot-retroarch-](https://github.com/bite-your-idols/gamestarter-openelec/raw/master/assets/screenshot-retroarch.gif)
 
-The first time RetroArch is launched I recommend to update everything (Settings menu> Online Updater). Then you can create your own playlists, start games, change cores, user dynamic wallpapers, boxarts, update cores... just like in [Lakka](http://www.lakka.tv/) distro!!
-
-
-###### Tip:
 You can create a custom skin menu shortcut or you can [remap your remote](http://kodi.wiki/view/HOW-TO:Modify_keymaps) and assign to a key the following action:
 ```
 XBMC.System.Exec("/storage/.kodi/addons/script.gamestarter/resources/bin/gamestarter.sh retroarch")
@@ -83,16 +83,15 @@ Also, there is a "Frontend" category where you can launch both RetroArch and Emu
 
 #### EmulationStation:
 Finally, EmulationStation frontend is included.
+You can customize system lists editing /storage/.config/emulationstation/es_systems.cfg file
 ![screenshot-emulationstation-](https://github.com/bite-your-idols/gamestarter-openelec/raw/master/assets/screenshot-emulationstation.png)
 
-You can customize system lists editing /storage/.config/emulationstation/es_systems.cfg file
 
-
-###### Tip:
-Instead os using the addon you can [remap your remote](http://kodi.wiki/view/HOW-TO:Modify_keymaps) and assign to a key the following action:
+You can create a custom skin menu shortcut or you can [remap your remote](http://kodi.wiki/view/HOW-TO:Modify_keymaps) and assign to a key the following action:
 ```
 XBMC.System.Exec("/storage/.kodi/addons/script.gamestarter/resources/bin/gamestarter.sh emulationstation")
 ```
+> This frontend does not work in OE6-.
 
 .
 
@@ -121,9 +120,11 @@ pkill uae4arm
 
 
 #### GameMaker Pi:
-As an extra feature, there is an optional installation of three free games from GameMaker Team. To make them work I had to make a [hacklib](http://forum.kodi.tv/showthread.php?pid=1481392#pid1481392) in order to downgrade some OpenELEC libs. If you notice that this downgrade is making some curl-related issues to your system, you can toggle the hack on/off using an addon I created and installed under Program addons menu called "hacklib".
+As an extra feature, there is an optional installation of three free games from [GameMaker Team](http://yoyogames.com/pi). To make them work I had to make a [hacklib](http://forum.kodi.tv/showthread.php?pid=1481392#pid1481392) in order to downgrade some OpenELEC libs. If you notice that this downgrade is making some curl-related issues to your system, you can toggle the hack on/off using an addon I created and installed under Program addons menu called "hacklib".
 
 These games only work with Xbox Controller :(
+
+> These games have sound issues in OE7+.
 
 You can exit them using ssh too:
 ```
@@ -155,7 +156,7 @@ More info: [IARL](https://github.com/zach-morris/plugin.program.iarl/wiki)
 
 - RetroArch, UAE4ARM & EmulationStation compiled by [Escalade](http://openelec.tv/forum/124-raspberry-pi/80543-raspberry-pi2-3-openelec-7-0-kodi-16-0-retroarch)
 
-- AdvancedLauncher "skin" by [tronkyfran](https://github.com/HerbFargus/es-theme-tronkyfran)
+- AdvancedLauncher "skin" images by [tronkyfran](https://github.com/HerbFargus/es-theme-tronkyfran)
 
 
 
