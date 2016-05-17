@@ -13,7 +13,7 @@ With this addon you will continue with your own customized Kodi but empowered in
 - Retroarch multi-emulator frontend (updated to v1.3.4) with a launcher addon and joypad configs,
 - AdvancedLauncher addon with default emulators list and a custom skin,
 - Emulationstation frontend,
-- Amiga UAE4ARM emulator included in AdvancedLauncher and Emulationstation frontend,
+- Amiga UAE4ARM emulator included in AdvancedLauncher and Emulationstation frontends,
 - Some test freeware roms.
 
 Also, you will have the choice of one-click installation of:
@@ -32,7 +32,7 @@ Download the latest release of the addon from [Release Page](), copy into your R
 
 ##### Addon Settings 
 In addon settings you can define what frontend you want to use everytime you launch the addon, between RetroArch and EmulationStation.
-From there, you can also install Internet Archive ROM launcher and GameMaker Pi ports. More options coming...
+From there, you can also install Internet Archive ROM launcher and GameMaker Pi ports. More options are coming...
 
 ![screenshot-addon-settings](https://github.com/bite-your-idols/script.gamestarter/raw/master/resources/media/screenshot003.png)
 
@@ -41,8 +41,8 @@ From there, you can also install Internet Archive ROM launcher and GameMaker Pi 
 
 
 ##### Pre-Installed image 
-You can download and write [this pre-installed image](https://goo.gl/l9X3rC) with OpenELEC into your SD card using [USB Image Tool](http://www.alexpage.de/usb-image-tool/). It includes some extras like custom splash screen and addon shortcuts on home page. After image boot you can expand your OpenELEC storage following [this workaround](forum.kodi.tv/showthread.php?tid=230353&pid=2166080#pid2166080). 
-This is based on old Gamestarter and OpenenELEC versions and I am not going to update any more, addon installation is so easy and if you want a kodi prebuilt image with retrogaming setup there are other alternatives.
+>You can download and write [this pre-installed image](https://goo.gl/l9X3rC) with OpenELEC into your SD card using [USB Image Tool](http://www.alexpage.de/usb-image-tool/). It includes some extras like custom splash screen and addon shortcuts on home page. >After image boot you can expand your OpenELEC storage following [this workaround](forum.kodi.tv/showthread.php?tid=230353&pid=2166080#pid2166080). 
+>This is based on old Gamestarter and OpenenELEC versions and I am not going to update any more, addon installation is so easy and if you want a kodi prebuilt image with retrogaming setup there are other alternatives.
 
 .
 
@@ -64,7 +64,7 @@ XBMC.System.Exec("/storage/.kodi/addons/script.gamestarter/resources/bin/gamesta
 
 #### AdvancedLauncher:
 
-Another way to launch RetroArch games, amiga roms and GameMaker Pi ports, is using [AdvancedLauncher](https://github.com/edwtjo/advanced-launcher), located also under Program Addons. Using this you will get all your games just like your movies or music, integrated in Kodi.
+The most "Kodi-like" way to launch RetroArch games, amiga roms and GameMaker Pi ports, is using [AdvancedLauncher](https://github.com/edwtjo/advanced-launcher), located also under Program Addons. Using this you will get all your games just like your movies or music, integrated in Kodi.
 
 
 ![screenshot-advlauncher-context](https://github.com/bite-your-idols/gamestarter-openelec/raw/master/assets/screenshot-advlauncher-context.png)
@@ -82,7 +82,7 @@ Also, there is a "Frontend" category where you can launch both RetroArch and Emu
 .
 
 #### EmulationStation:
-Finally, EmulationStation frontend is included.
+Finally, [EmulationStation](https://github.com/Herdinger/EmulationStation) frontend is included.
 You can customize system lists editing /storage/.config/emulationstation/es_systems.cfg file
 ![screenshot-emulationstation-](https://github.com/bite-your-idols/gamestarter-openelec/raw/master/assets/screenshot-emulationstation.png)
 
@@ -101,11 +101,8 @@ XBMC.System.Exec("/storage/.kodi/addons/script.gamestarter/resources/bin/gamesta
 
 Amiga emulation is based on [UAE4ARM Pi](https://www.raspberrypi.org/forums/viewtopic.php?t=110488) port, You can not launch emulator into GUI by now, but you can launch games from Kodi's Advanced Launcher or Emulationstation. Games must be ".adf" files. All files from Multi-disk games must be named the same adding "_Disk1.adf", "_Disk2.adf"... like this:
 > name of the game_Disk1.adf
-
 > name of the game_Disk2.adf
-
 > name of the game_Disk3.adf
-
 > ...
 
 You will need a mouse in order to start games and a keyboard to exit, save/load states...
@@ -124,14 +121,13 @@ As an extra feature, there is an optional installation of three free games from 
 
 These games only work with Xbox Controller :(
 
-> These games have sound issues in OE7+.
-
 You can exit them using ssh too:
 ```
 pkill MalditaCastilla
 pkill SuperCrateBox
 pkill TheyNeedToBeFed
 ```
+> These games have sound issues in OE7+.
 
 .
 
@@ -139,7 +135,7 @@ pkill TheyNeedToBeFed
 
 #### Internet Archive ROM Launcher:
 
-Finally, you can use Video Addons > IARL addon, it will launch Games hosted on the Internet Archive. 
+Finally, after installing from Addon settings, you can use Video Addons > IARL addon, it will launch Games hosted on the Internet Archive. 
 
 ![Screen #2](https://raw.githubusercontent.com/zach-morris/plugin.program.iarl/master/support/media/screen2.jpg)
 
