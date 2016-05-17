@@ -1,61 +1,42 @@
 # Gamestarter v2
 ![Gamestarter-logo](https://raw.githubusercontent.com/bite-your-idols/script.gamestarter/master/resources/media/gamestarter-logo.jpg)
-Retrogaming addon for Raspberry Pi's Kodi. The Work-In-Progress new version of [Gamestarter](https://github.com/bite-your-idols/gamestarter-openelec). 
-
-WIP
-
-
+The Work-In-Progress new version of [Gamestarter](https://github.com/bite-your-idols/gamestarter-openelec). 
 
 English/[Spanish](https://github.com/bite-your-idols/gamestarter-openelec/blob/master/README-ES.md)
 
 Follow me on [twitter](https://twitter.com/bite_your_idols).
 
 ## About
-If you use a Raspberry Pi as a media center running Kodi on [OpenELEC](http://openelec.tv/get-openelec), you like retro-gaming and you want to launch games just as you do with movies and tv shows without dual-booting, swaping SD memories... Here you have the definitve solution.
+If you use a Raspberry Pi as a media center running Kodi on [LibreELEC](https://libreelec.tv/) or [OpenELEC](http://openelec.tv/), you like retrogaming and you want to launch games just as you do with movies and tv shows without dual-booting, swaping SD memories... Here you have the definitve solution.
 
-After installation you will continue with your own customized OpenELEC but empowered including: 
+With this addon you will continue with your own customized Kodi but empowered including: 
 - Retroarch multi-emulator frontend (updated to v1.3.4) with a launcher addon and joypad configs,
-- AdvancedLauncher addon with default emulator list and custom skin,
+- AdvancedLauncher addon with default emulator list and a custom skin,
 - Amiga UAE4ARM emulator,
-- Internet Archive ROM Launcheraddon to launch games from the "cloud".
-- 3 GameMaker Pi ports including modern masterpiece "Maldita Castilla".
-- Emulationstation* frontend (*only available in ssh installation and it only works in OE7)
+- Emulationstation frontend,
 - Some test freeware roms.
+
+Also, you will have the choice of one-click installation of:
+- Internet Archive ROM Launcheraddon to launch games from the "cloud",
+- 3 GameMaker Pi ports including modern masterpiece "Maldita Castilla".
+
 
 So, let's go!!
 
 ## Installation Instructions
-Download the [Gamestarter installer addon](https://github.com/bite-your-idols/script.gamestarter.installer/archive/master.zip), copy into your Raspberry and select "install from zip" in Settings>Addons menu. Let the installer work for less than 5 minutes and it will notify you when finished. Then copy your [roms and bios](https://github.com/libretro/Lakka/wiki/ROMs-and-BIOSes) to /storage/emulators/ folder via ftp or [samba](http://wiki.openelec.tv/index.php/Accessing_Samba_Shares) and reboot.
+Download the latest release of the addon from [Release Page](), copy into your Raspberry and select "install from zip" in Settings>Addons menu.  The first time the addon is launched it will perfomr some settings. Then copy your [roms and bios](https://github.com/libretro/Lakka/wiki/ROMs-and-BIOSes) to /storage/emulators/ folder via ftp or [samba](http://wiki.openelec.tv/index.php/Accessing_Samba_Shares) and reboot.
 
 Piece of cake!
 
 
->Before installation I recommend to backup your system with [OpenELEC's Configuration Tool](http://wiki.openelec.tv/index.php/OpenELEC_Configuration_Addon) or creating an image of your SD card using [USB Image Tool](http://www.alexpage.de/usb-image-tool/).
+>Before installation I recommend to backup your system or create an image of your SD card using [USB Image Tool](http://www.alexpage.de/usb-image-tool/).
 
->Since this is still a work in progress project some things may not work, but I have tested into OpenELEC 6.0.3/6.95.2 in a Raspberry Pi 2/3 model B and everything is working ok. I also recommend to read this whole text before installation to understand what is this all about.
-
-.
-
-
-##### Alternative installation method: ssh
-
-Connect to your Raspberry Pi via [ssh](http://wiki.openelec.tv/index.php/OpenELEC_FAQ#How_do_i_use_SSH.3F) and type:
-
-```
-wget --no-check-certificate -O /storage/installer-menu.sh https://raw.githubusercontent.com/bite-your-idols/gamestarter-openelec/master/installer-menu.sh && sh /storage/installer-menu.sh
-```
-
-Then you can choose between current standard version (same as installer addon) and the advanced version which includes optional installation of Emulationstation (it only works in OE7) and Gamemaker Pi ports (no sound in OE7) during installation process.
-
-
-relax and wait 5 minutes...
-
-
-After that, you should reboot your system and copy your [roms and bios](https://github.com/libretro/Lakka/wiki/ROMs-and-BIOSes) to /storage/emulators/ folder via ftp or [samba](http://wiki.openelec.tv/index.php/Accessing_Samba_Shares).
-
-That's all!
+>The addon has ben tested into OpenELEC 6, OpeneELEC 7 beta and LibreELEC 7 in a Raspberry Pi 2/3 model B and everything is working ok. I also recommend to read this whole text before installation to understand what is this all about.
 
 .
+
+
+
 
 ##### Bonus: Pre-Installed image 
 There is an alternative way for getting Gamestarter, you can download and write [this pre-installed image](https://goo.gl/l9X3rC) with OpenELEC into your SD card using [USB Image Tool](http://www.alexpage.de/usb-image-tool/): 
