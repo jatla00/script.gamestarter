@@ -1,12 +1,10 @@
 # Gamestarter v2
 ![Gamestarter-logo](https://raw.githubusercontent.com/bite-your-idols/script.gamestarter/master/resources/media/gamestarter-logo.jpg)
-The Work-In-Progress new version of [Gamestarter](https://github.com/bite-your-idols/gamestarter-openelec). 
 
 English/[Spanish](https://github.com/bite-your-idols/gamestarter-openelec/blob/master/README-ES.md)
 
 Follow me on [twitter](https://twitter.com/bite_your_idols).
 
-## About
 If you use a Raspberry Pi as a media center running Kodi on [LibreELEC](https://libreelec.tv/) or [OpenELEC](http://openelec.tv/), you like retrogaming and you want to launch games just as you do with movies and tv shows without dual-booting, swaping SD memories... Here you have the definitve solution.
 
 With this addon you will continue with your own customized Kodi but empowered including: 
