@@ -3,6 +3,8 @@
 
 English/[Spanish](https://github.com/bite-your-idols/gamestarter-openelec/blob/master/README-ES.md)
 
+Follow me on [twitter](https://twitter.com/bite_your_idols)
+
 ## Retrogamig addon for Raspberry Pi's Kodi.
 
 If you use a Raspberry Pi as a media center running Kodi on [LibreELEC](https://libreelec.tv/) or [OpenELEC](http://openelec.tv/), you like retrogaming and you want to launch games just as you do with movies and tv shows without dual-booting, swaping SD memories, complex installations... Here you have the definitve solution.
@@ -20,13 +22,13 @@ Also, you will have the choice of one-click installation of:
 
 So, let's go!!
 
->Follow me on [twitter](https://twitter.com/bite_your_idols).
 
 ## Installation Instructions
-Download the latest release of the addon from [Release Page](), copy into your Raspberry and select "install from zip" in Settings>Addons menu.  The first time the addon is launched it will perfomr some settings. Then copy your [roms and bios](https://github.com/libretro/Lakka/wiki/ROMs-and-BIOSes) to /storage/emulators/ folder via ftp or [samba](http://wiki.openelec.tv/index.php/Accessing_Samba_Shares) and reboot.
+Download the latest release of the addon from [Release Page](), copy into your Raspberry Pi and select "install from zip" in Settings>Addons menu. The first time the addon is launched it will perform some settings. Then copy your [roms and bios](https://github.com/libretro/Lakka/wiki/ROMs-and-BIOSes) to /storage/emulators/ folder via ftp or [samba](http://wiki.openelec.tv/index.php/Accessing_Samba_Shares) and reboot.
 
+
+![gamestarter-addon](https://raw.githubusercontent.com/bite-your-idols/script.gamestarter/master/resources/media/screenshot000.png)
 Piece of cake!
-
 
 >Before installation I recommend to backup your system or create an image of your SD card using [USB Image Tool](http://www.alexpage.de/usb-image-tool/).
 
