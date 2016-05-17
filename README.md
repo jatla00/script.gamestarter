@@ -13,11 +13,11 @@ With this addon you will continue with your own customized Kodi but empowered in
 - Retroarch multi-emulator frontend (updated to v1.3.4) with a launcher addon and joypad configs,
 - AdvancedLauncher addon with default emulator list and a custom skin,
 - Emulationstation frontend,
-- Amiga UAE4ARM emulator,
+- Amiga UAE4ARM emulator included in AdvancedLauncher and Emulationstation frontend,
 - Some test freeware roms.
 
 Also, you will have the choice of one-click installation of:
-- Internet Archive ROM Launcheraddon to launch games from the "cloud",
+- Internet Archive ROM Launcher addon to launch games from the "cloud",
 - 3 GameMaker Pi ports including modern masterpiece "Maldita Castilla".
 
 So, let's go!!
@@ -26,9 +26,7 @@ So, let's go!!
 ## Installation Instructions
 Download the latest release of the addon from [Release Page](), copy into your Raspberry Pi and select "install from zip" in Settings>Addons menu. The first time the addon is launched it will perform some settings. Then copy your [roms and bios](https://github.com/libretro/Lakka/wiki/ROMs-and-BIOSes) to /storage/emulators/ folder via ftp or [samba](http://wiki.openelec.tv/index.php/Accessing_Samba_Shares) and reboot.
 
-
 ![gamestarter-addon](https://raw.githubusercontent.com/bite-your-idols/script.gamestarter/master/resources/media/screenshot000.png)
-Piece of cake!
 
 >Before installation I recommend to backup your system or create an image of your SD card using [USB Image Tool](http://www.alexpage.de/usb-image-tool/).
 
@@ -37,20 +35,12 @@ Piece of cake!
 .
 
 
-
-
-##### Bonus: Pre-Installed image 
-There is an alternative way for getting Gamestarter, you can download and write [this pre-installed image](https://goo.gl/l9X3rC) with OpenELEC into your SD card using [USB Image Tool](http://www.alexpage.de/usb-image-tool/): 
-
-
-
-![screenshot-kodi-b](https://github.com/bite-your-idols/gamestarter-openelec/raw/master/assets/screenshot-kodi-b.png)
-
-It includes some extras like custom splash screen and addon shortcuts on home page.
-
-It's burn & run!!!
+##### Pre-Installed image 
+You can download and write [this pre-installed image](https://goo.gl/l9X3rC) with OpenELEC into your SD card using [USB Image Tool](http://www.alexpage.de/usb-image-tool/). It includes some extras like custom splash screen and addon shortcuts on home page.
 
 >After image boot you can expand your OpenELEC storage following [this workaround](forum.kodi.tv/showthread.php?tid=230353&pid=2166080#pid2166080).
+
+This is based on an old Gamestarter and OpenenELEC version and I am not going to update any more, addon installation is so easy and if you want a kodi prebuild image with retrogaming setup there are other alternatives.
 
 .
 
